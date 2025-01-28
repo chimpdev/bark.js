@@ -1,1 +1,1 @@
-export { BarkClient, BarkOptions, BarkPushPayload, BarkResponse } from './barkClient';
+export { BarkClient } from './barkClient';
