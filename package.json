@@ -7,7 +7,7 @@
   "files": [
     "lib/**/*"
   ],
-  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "lint": "eslint .",
