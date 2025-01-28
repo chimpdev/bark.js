@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "dom"
+    ],
+    "rootDir": "./",
+    "outDir": "./dist",
+    "module": "Preserve",
+    "target": "ES2023",
+    "skipLibCheck": true
+  }
+}
