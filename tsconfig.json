@@ -4,13 +4,9 @@
     "outDir": "./lib",
     "target": "ES6",
     "module": "CommonJS",
-    "skipLibCheck": true,
     "declaration": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "strict": true,
-    "types": [
-      "./src/types/index.d.ts"
-    ],
+    "strict": true
   }
 }
