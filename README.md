@@ -29,18 +29,18 @@ npm install @thiskyhan/bark.js
 ## Usage
 
 ```typescript
-import { BarkClient, BarkOptions, BarkPushPayload } from 'bark.js';
+import { BarkClient, BarkPushPayload } from 'bark.js';
 
 // Configure the Bark client
-const options: BarkOptions = {
-  baseUrl: 'https://your-bark-server.com',
+const options = {
+  baseUrl: 'https://your-bark-server.com', // You can also http://api.day.app as the base URL for the official Bark server
   key: 'your-device-key'
 };
 
 const client = new BarkClient(options);
 
 // Create a notification payload
-const payload: BarkPushPayload = {
+const payload = {
   body: 'Hello, this is a test notification!',
   title: 'Test Notification',
   icon: 'https://example.com/icon.jpg',
