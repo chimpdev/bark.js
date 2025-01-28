@@ -38,3 +38,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm dlx semantic-release
+      - uses: harryzcy/action-bark@main
+        with:
+            status: ${{ job.status }}
+            on_status: success, failure, cancelled # only run on these status
+            device_key: ${{ secrets.BARK_DEVICE_KEY }}
+            bark_server_url: ${{ secrets.BARK_SERVER_URL }}
+            title: "${{ github.event.repository.name }}@${{ steps.release.outputs.version }}"
+            body: "Release ${{ github.event.repository.name }}@${{ steps.release.outputs.version }}\n${{ github.event.head_commit.message }}\nRelease ${{ job.status }}."
+            url: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            copy: true
+        if: always()
