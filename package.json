@@ -14,10 +14,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chimpdev/bark.js.git"
-  },
+  "repository": "https://github.com/chimpdev/bark.js.git",
   "bugs": {
     "url": "https://github.com/chimpdev/bark.js/issues"
   },
