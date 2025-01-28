@@ -21,6 +21,11 @@ export interface BarkResponse {
 }
 
 /**
+ * Represents the different sounds that can be played with a push notification.
+ */
+export type BarkSounds = 'alarm' | 'anticipate' | 'bell' | 'birdsong' | 'bloom' | 'calypso' | 'chime' | 'choo' | 'descent' | 'electronic' | 'fanfare' | 'glass' | 'gotosleep' | 'healthnotification' | 'horn' | 'ladder' | 'mailsent' | 'minuet' | 'multiwayinvitation' | 'newmail' | 'newsflash' | 'noir' | 'paymentsuccess' | 'shake' | 'sherwoodforest' | 'silence' | 'spell' | 'suspense' | 'telegraph' | 'tiptoes' | 'typewriters' | 'update';
+
+/**
  * Payload for a push notification sent via Bark.
  */
 export interface BarkPushPayload {
@@ -33,7 +38,7 @@ export interface BarkPushPayload {
   /** Badge number for the notification (optional) */
   badge?: number;
   /** Sound to play with the notification (optional) */
-  sound?: string;
+  sound?: BarkSounds;
   /** Icon URL for the notification (optional) */
   icon?: `${string}.jpg`;
   /** Group name for grouping messages (optional) */
