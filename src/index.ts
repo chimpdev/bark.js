@@ -1,3 +1,1 @@
-export const Client = () => {
-  console.log('Hello from Client');
-};
+export { BarkClient, BarkOptions, BarkPushPayload, BarkResponse } from './barkClient';
