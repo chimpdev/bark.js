@@ -5,8 +5,9 @@
   "description": "A simple JavaScript library for Bark.",
   "type": "module",
   "files": [
-    "dist/**/*"
+    "lib/**/*"
   ],
+  "typings": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "lint": "eslint .",

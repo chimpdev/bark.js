@@ -5,9 +5,12 @@
       "dom"
     ],
     "rootDir": "./",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "module": "Preserve",
     "target": "ES2023",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "./src/types/index.d.ts"
+    ],
   }
 }

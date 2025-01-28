@@ -6,8 +6,8 @@ import pluginSecurity from "eslint-plugin-security";
 export default [
   {
     ignores: [
-      'dist/**/*.ts',
-      'dist/**',
+      'lib/**/*.ts',
+      'lib/**',
       "**/*.mjs",
       "eslint.config.mjs",
       "**/*.js"
