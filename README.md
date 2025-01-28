@@ -23,7 +23,7 @@
 ## Installation
 
 ```bash
-npm install bark.js
+npm install @thiskyhan/bark.js
 ```
 
 ## Usage
