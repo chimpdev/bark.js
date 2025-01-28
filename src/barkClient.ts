@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import type { BarkOptions, BarkResponse, BarkPushPayload } from './types/index';
+import type { BarkOptions, BarkResponse, BarkPushPayload } from './';
 
 class BarkError extends Error {
   public statusCode?: number;
