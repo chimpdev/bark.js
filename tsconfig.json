@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ESNext",
-      "dom"
-    ],
     "rootDir": "./",
     "outDir": "./lib",
-    "module": "Preserve",
-    "target": "ES2023",
+    "target": "ES6",
+    "module": "CommonJS",
     "skipLibCheck": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
     "types": [
       "./src/types/index.d.ts"
     ],
