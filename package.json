@@ -3,7 +3,7 @@
   "name": "@thiskyhan/bark.js",
   "version": "1.0.0",
   "description": "A simple JavaScript library for Bark.",
-  "type": "module",
+  "main": "lib/src/index.js",
   "files": [
     "lib/**/*"
   ],
