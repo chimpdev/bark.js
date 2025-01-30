@@ -42,7 +42,7 @@ export interface BarkPushPayload {
   /** Sound to play with the notification (optional) */
   sound?: BarkSounds;
   /** Icon URL for the notification (optional) */
-  icon?: `${string}.jpg`;
+  icon?: string;
   /** Group name for grouping messages (optional) */
   group?: string;
   /** URL to open when the notification is clicked (optional) */
