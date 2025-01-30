@@ -24,7 +24,15 @@ export class BarkClient {
 
   private validatePayload(payload: BarkPushPayload): void {
     if (!payload.body) throw new BarkError('The \'body\' field is required for a push notification.');
-    if (payload.icon && !payload.icon.endsWith('.jpg')) throw new BarkError('The \'icon\' field must be a URL to a JPG image.');
+    if (payload.icon) {
+      try {
+        new URL(payload.icon);
+
+        if (!payload.icon.endsWith('.jpg')) throw new BarkError('The \'icon\' field must be a JPG image.');
+      } catch {
+        throw new BarkError('The \'icon\' field must be a valid URL.');
+      }
+    }
     if (payload.url) {
       try {
         new URL(payload.url);
