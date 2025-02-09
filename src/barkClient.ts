@@ -22,7 +22,7 @@ export class BarkClient {
   private key: string;
   private client: AxiosInstance;
 
-  private validatePayload(payload: BarkPushPayload): void {
+  private validatePayload(payload: BarkPushPayload) {
     if (!payload.body) throw new BarkError('The \'body\' field is required for a push notification.');
     if (payload.icon) {
       try {
@@ -77,5 +77,27 @@ export class BarkClient {
 
       throw error;
     }
+  }
+
+  /**
+   * Sets the base URL for the client.
+   *
+   * This method updates both the local `baseUrl` property and the default base URL for
+   * all HTTP requests made by the client.
+   *
+   * @param baseUrl - The new base URL to use.
+   */
+  setBaseUrl(baseUrl: string) {
+    this.baseUrl = baseUrl;
+    this.client.defaults.baseURL = baseUrl;
+  }
+
+  /**
+   * Sets the API key for the client.
+   *
+   * @param key - The API key that will be used for authentication.
+   */
+  setKey(key: string) {
+    this.key = key;
   }
 }
