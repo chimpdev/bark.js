@@ -29,7 +29,7 @@ npm install @thiskyhan/bark.js
 ## Usage
 
 ```typescript
-import { BarkClient, BarkPushPayload } from 'bark.js';
+import { BarkClient, BarkPushPayload } from '@thiskyhan/bark.js';
 
 // Configure the Bark client
 const options = {
